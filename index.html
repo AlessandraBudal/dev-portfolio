@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dev|Portfolio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+
+        <img src="./img/ale_page-0001.jpg" alt="Foto de Alessandra B.Auerhahn" class="foto-perfil">
+        <h1>Alessandra B. Auerhahn</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedora Front End</p>
+
+
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Desenvolvedora Front-End apaixonada por transformar ideias em experiências digitais modernas e
+                funcionais. Gosto de unir código limpo, design cuidadoso e atenção aos detalhes para criar interfaces
+                que não só funcionam bem, mas também encantam quem as utiliza.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+
+
+            <div class="projetos-card">
+                <a href="https://alessandrabudal.github.io/Pagina-Apple/" target="_blank">
+                <img src="./img/Pagina Apple_page-0001.jpg" alt="Projeto 1" class="projetos-imagem">
+                <h3 class="info-projetos">DevClub Store</h3>
+                <div class="caixa-textos-projeto">
+                    <p class="paragrafo-projetos">Landing page com carrossel interativo de produtos Apple, apresentando o Apple Watch, AirPods Max e Vision Pro com navegação por setas e indicadores.</p>
+
+
+                </div>
+                </a>
+            </div>
+
+            <div class="projetos-card">
+                <a href="https://alessandrabudal.github.io/Refri-Fruit/" target="_blank">
+                <img src="./img/Refri Fruit_page-0001.jpg" alt="Projeto 2" class="projetos-imagem">
+                <h3 class="info-projetos">Refri Store</h3>
+                <div class="caixa-textos-projeto">
+                    <p class="paragrafo-projetos">Landing page para uma marca fictícia de refrigerantes com sabores de frutas, com vídeo de fundo animado e transições entre os produtos morango, abacate e laranja</p>
+                </div>
+                </a>
+
+            </div>
+
+            <div class="projetos-card">
+                <a href="https://alessandrabudal.github.io/P-gina-Consulta-M-dica/" target="_blank">
+                <img src="./img/che_page-0001.jpg" alt="Projeto 3" class="projetos-imagem">
+                <h3 class="info-projetos">Página Agendamento Médico</h3>
+                <div class="caixa-textos-projeto">
+                    <p class="paragrafo-projetos">Landing page de serviços médicos com sistema de agendamento online e apresentação de especialidades.</p>
+                </div>
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form"></div>
+            <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp </button>
+
+
+        </form>
+
+    </section>
+
+    <script>
+        function enviarWhats(event){
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5547997366711'
+
+            const texto = `Olá, Me Chamo ${nome}, ${mensagem}`
+        
+    const msgFormtada = encodeURIComponent (texto)
+
+    const url = `https://wa.me/${5547997366711}?text=${msgFormtada}`
+
+    console.log(url)
+
+        window.open(url, '_blank')
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
