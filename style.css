@@ -10,12 +10,12 @@ html {
 }
 
 :root {
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
+    --primaria: #FFC0CB;
+    --secundaria: #DC143C;
     --escuro: #0f172a;
-    --maisEscuro: #0a0f1c;
+    --maisEscuro: #FFB6C1;
     --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
+    --vidro: #FF1493(255, 255, 255, 0.1);
 
 }
 
@@ -145,7 +145,7 @@ h1 {
 }
 
 .projetos-card:hover{
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 20px #FFF0F5;
     transform: translateY(-10px) scale(1.03);
 
 
@@ -235,9 +235,9 @@ h1 {
 .campo-form {
     width: 100%;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: #FFF0F5;
     border-radius: 8px;
-    color: var(--claro);
+    color: #000000;
     border: 1px solid var(--vidro);
     outline: none;
 
@@ -245,7 +245,7 @@ h1 {
 
 .campo-form:focus {
     border-color: var(--secundaria);
-    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 0 10px #DB7093;
 }
 
 .grupo-form {
@@ -263,13 +263,14 @@ h1 {
     font-weight: bold;
     width: 100%;
     transition: all 0.5 ease;
-
+    margin-top: 0.5rem;
+    
 
 }
 
 .botao-form:hover{
     transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4)  ;
+    box-shadow: 0 5px 15px #FFF0F5  ;
 
 
 }
